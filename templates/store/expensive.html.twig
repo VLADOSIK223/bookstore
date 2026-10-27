@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Самая дорогая книга{% endblock %}
+
+{% block body %}
+    <h1>Самая дорогая книга</h1>
+
+    {% if book %}
+        <p>{{ book.title }} - {{ book.price }} руб.</p>
+    {% else %}
+        <p>Книг пока нет</p>
+    {% endif %}
+{% endblock %}  

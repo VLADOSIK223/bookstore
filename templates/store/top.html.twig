@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Лучшие клиенты{% endblock %}
+
+{% block body %}
+    <h1>Три лучших клиента</h1>
+
+    <table border="1" cellpadding="8" cellspacing="0">
+        <tr>
+            <th>Место</th>
+            <th>Покупатель</th>
+            <th>Потратил, руб.</th>
+        </tr>
+        {% for customer in customers %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ customer.name }}</td>
+                <td>{{ customer.spent }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}  

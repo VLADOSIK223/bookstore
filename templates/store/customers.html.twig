@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Покупатели{% endblock %}
+
+{% block body %}
+    <h1>Покупатели и количество заказов</h1>
+
+    <table border="1" cellpadding="8" cellspacing="0">
+        <tr>
+            <th>Имя</th>
+            <th>Почта</th>
+            <th>Заказов</th>
+        </tr>
+        {% for customer in customers %}
+            <tr>
+                <td>{{ customer.name }}</td>
+                <td>{{ customer.email }}</td>
+                <td>{{ customer.ordersCount }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

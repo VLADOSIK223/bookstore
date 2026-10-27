@@ -1,0 +1,8 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Средний заказ{% endblock %}
+
+{% block body %}
+    <h1>Средняя сумма заказа</h1>
+    <p>{{ average|round(2) }} руб.</p>
+{% endblock %}

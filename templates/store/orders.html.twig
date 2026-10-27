@@ -1,0 +1,22 @@
+    {% extends 'base.html.twig' %}
+
+{% block title %}Заказы{% endblock %}
+
+{% block body %}
+    <h1>Сумма каждого заказа</h1>
+
+    <table border="1" cellpadding="8" cellspacing="0">
+        <tr>
+            <th>Заказ</th>
+            <th>Покупатель</th>
+            <th>Сумма, руб.</th>
+        </tr>
+        {% for order in orders %}
+            <tr>
+                <td>№{{ order.orderId }}</td>
+                <td>{{ order.name }}</td>
+                <td>{{ order.total }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
